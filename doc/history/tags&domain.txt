@@ -1,0 +1,18 @@
+All tags/classes:
+
+# id-name
+0-chat eva聊天
+1-music 音乐
+2-restaurant 餐饮／酒店／娱乐
+3-map 地图导航
+4-taxi 打车
+5-weather 天气
+6-app 应用软件
+7-video 视频／电影
+8-telephone 电话
+9-message 信息
+10-movie_tickets 电影票
+11-transport_tickets 火车票／机票
+12-other 其他
+
+domain name: data.raventech.com / datatagging.raventech.com

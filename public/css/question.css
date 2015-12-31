@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+html,body{
+	height: 100%;
+}
+.text-center{
+	text-align: center;
+}
+.black{
+	color: black;
+}
+.gray{
+	color: #c6c6c6;
+}
+.has_background {
+	background: #FDFFD8;
+}
+::selection {
+	background:  #FDFFD8;	
+}
+::-moz-selection{
+	background:  #FDFFD8;
+}
+#back{
+	height:7px;
+	background: #ececec;
+}
+#process{
+	background: black;
+	height: 7px;
+	transition :width .6s;
+	-webkit-transition:width .6s;
+	-moz-transition:width .6s;
+}
+#zhujie{
+	color: gray;
+	font-size: 14px;
+	padding-top: 20px;
+}
+#container{
+	max-width: 60%;
+	margin: 15% auto;
+}
+#text{
+	font-size: 30px;
+}
+#text span{
+	user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	padding: 10px;
+}
+#choices{
+	max-width: 60%;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+#choices div{
+	color: #c6c6c6;
+	display: inline-block;
+	margin: 15px;
+	font-size: 16px;
+	cursor: pointer;
+}
+#left{
+	position: absolute;
+	left: 35%;
+	top: 80%;
+	cursor: pointer;
+}
+.right{
+	position: absolute;
+	right: 35%;
+	top: 80%;
+	cursor: pointer;
+}
+#complete{
+	position: absolute;
+	top: 30%;
+	text-align: center;
+	width: 100%;
+	height: 200px;
+	line-height: 200px;
+	font-size: 30px;
+	letter-spacing: 10px;
+}
+#complete span{
+	cursor: pointer;
+	font-size: 20px;
+}
+@media (max-width: 768px) {
+	#complete{
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+	#complete span{
+		font-size: 14px;
+	}
+	#container{
+		max-width: 80%;
+	}
+	#choices{
+		max-width: 100%;
+		margin-top: 46px;
+	}
+	#choices div{
+		margin: 10px;
+	}
+	#left{
+		left: 22%;
+		top: 90%;
+	}
+	.right{
+		right: 22%;
+		top: 90%;
+	}
+	#back{
+		height: 5px;
+	}
+	#process{
+		height: 5px;
+	}
+}

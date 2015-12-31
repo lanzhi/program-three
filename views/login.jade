@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no')
+        title 登录
+        link(rel='stylesheet' href='../public/css/login.css')
+        script(src='../public/vue.min.js')
+        script(src='../public/qwest.min.js')
+    body
+        div#container.text-center
+            input#tel.text-center(type='text' placeholder='手机号' maxlength='11' v-model='telephone')
+            button#sub.center(v-on:click='check()') 登录
+        script(src='../public/js/login.js')

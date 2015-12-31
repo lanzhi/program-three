@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no')
+        title 答题
+        link(rel='stylesheet' href='../public/css/question.css')
+        link(rel='stylesheet' href='../public/font/style.css')
+        script(src='../public/vue.min.js')
+        script(src='../public/qwest.min.js')
+    body
+        div#main
+            div(v-show="zIndex > -1")
+                div#back
+                    div#process(v-bind:style="{width: width + '%'}")
+                div#container.text-center
+                    div#text.text-center(v-on:mouseup="mouseUp(str.length-1)")
+                        span(v-for="q in str" v-text = "q" track-by="$index" v-on:mousedown="mouseDown($index)" v-on:mouseup="mouseUp($index)" v-on:touchstart="touchStart($index)" v-on:touchend="touchEnd($index)" v-bind:data-index="$index" v-bind:class="{has_background: bkColor[$index] == 1}")
+                    div#zhujie 注：在选中区域单击或选中已选区域可取消选中,若点击别处已选中颜色消失，请在文本范围内重新选择
+                    div#choices
+                        div(v-for="choice in choices" track-by="$index")
+                            span(v-text="choice.name" v-on:click="getLabels($index)" v-bind:class="{black: lIndex == $index}")
+                div#left(v-on:click="theLast()" v-bind:class="{gray: zIndex == 0}") 上一题
+                div.right(v-on:click="theNext()" v-show="zIndex < count - 1") 下一题
+                div.right(v-on:click="saveAnswer()" v-show="zIndex == (count - 1)") 提交
+            div#complete(v-show="zIndex == -1") 已完成所有答题，请明天再来
+                br
+                span(v-on:click="moreQuestions()") 继续答题
+        script(src='../public/js/question.js')

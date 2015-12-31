@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+}
+.text-center{
+	text-align: center;
+}
+.center{
+	margin: 0 auto;
+}
+#container{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+}
+#tel{
+	-webkit-appearance: none;
+	border-radius: 0;
+	width: 200px;
+	font-size: 18px;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid #979797;
+	outline: none;
+}
+#sub{
+	font-size: 18px;
+	display: block;
+	color: white;
+	width: 200px;
+	height: 30px;
+	margin-top: 30px;
+	border:1px;
+	background: black;
+	outline: none;
+}
